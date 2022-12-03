@@ -11,7 +11,7 @@ interface ICard {
 const categoryNames = ["All", "Body", "Colors", "Computers", "School"];
 
 const btnStyle =
-  "border-2 font-bold shadow-xl px-4 py-1 w-fit text-center mx-auto rounded-lg mb-2 mr-2 text-sm cursor-pointer bg-myRed border-red-700 text-white";
+  "border-2 font-bold shadow-xl px-1.5 sm:px-4 py-1 w-fit text-center rounded-lg mb-2 mr-2 text-sm cursor-pointer bg-myRed border-red-700 text-white";
 
 export const Filtering = () => {
   const [cards, setCards] = useState<ICard[]>([]);
@@ -38,7 +38,7 @@ export const Filtering = () => {
 
   return (
     <div>
-      <div className="w-fit mx-auto">
+      <div className="flex flex-wrap justify-center">
         {categoryNames.map((categoryName) => (
           <button
             key={categoryName}

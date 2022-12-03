@@ -4,6 +4,9 @@
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
 }
 * {
   -webkit-tap-highlight-color: transparent;

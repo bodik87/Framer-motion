@@ -12,7 +12,7 @@ export const Caroucel = () => {
   return (
     <motion.div
       ref={carousel}
-      className="carousel min-h-[20rem] cursor-grab overflow-hidden rounded-xl mt-2 mx-36"
+      className="carousel min-h-[20rem] cursor-grab overflow-hidden rounded-xl mt-2 sm:mx-36"
     >
       <motion.div
         drag="x"
