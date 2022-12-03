@@ -1,21 +1,26 @@
+import { Reorder, useDragControls } from "framer-motion";
+import { useState } from "react";
+
 const data = [
-  { title: "1. First element" },
-  { title: "2. Second element" },
-  { title: "3. Third element" },
+  { title: "😊 First element" },
+  { title: "😍 Second element" },
+  { title: "😜Third element" },
 ];
 
-const bgColors = ["bg-myGreen", "bg-myYellow", "bg-myRed"];
-
 export const ReorderList = () => {
+  const [items, setItems] = useState(data);
+  const controls = useDragControls();
   return (
-    <>
-      {data.map((item, i) => (
-        <div
-          className={`${bgColors[i]} px-4 py-2 w-[40%] mx-auto rounded-lg mb-2 text-sm`}
-        >
-          {item.title}
-        </div>
+    <Reorder.Group axis="y" values={items} onReorder={setItems}>
+      {items.map((item) => (
+        <Reorder.Item key={item.title} value={item}>
+          <div
+            className={`bg-myGreen shadow-md px-4 py-2 w-fit mx-auto rounded-lg mb-2 text-sm text-center`}
+          >
+            {item.title}
+          </div>
+        </Reorder.Item>
       ))}
-    </>
+    </Reorder.Group>
   );
 };

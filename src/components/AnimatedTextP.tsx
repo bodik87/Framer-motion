@@ -15,6 +15,14 @@ export const AnimatedTextP = () => {
         color: "#F0466D",
       }}
       variants={pVariants}
+      transition={{
+        delay: 0.5,
+        duration: 2,
+        repeat: Infinity,
+        repeatDelay: 1,
+        repeatType: "reverse",
+        type: "spring",
+      }}
     >
       Animated text
     </motion.p>

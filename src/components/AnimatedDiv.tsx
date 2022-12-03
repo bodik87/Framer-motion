@@ -7,7 +7,7 @@ export const AnimatedDiv = () => {
   };
   return (
     <motion.div
-      className="bg-myGreen rounded-xl w-24 h-24 flex items-center justify-center font-bold text-myDark p-5 mx-auto"
+      className="bg-myRed shadow-xl rounded-xl w-24 h-24 flex items-center justify-center font-bold text-myDark p-5 mx-auto text-4xl"
       animate={{ rotate: 360 }}
       transition={{
         delay: 0.5,
@@ -18,7 +18,7 @@ export const AnimatedDiv = () => {
         type: "spring",
       }}
     >
-      777
+      🤢
     </motion.div>
   );
 };

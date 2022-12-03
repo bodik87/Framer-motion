@@ -2,10 +2,15 @@ import { motion } from "framer-motion";
 
 export const AnimatedList = () => {
   const items = ["Text 1", "Text 2", "Text 3"];
-  const listVariants = {
+  const listVariants: any = {
     visible: (i: any) => ({
       opacity: 1,
-      transition: { delay: i + 0.5 },
+      transition: {
+        delay: i + 0.5,
+        repeatDelay: 3,
+        repeatType: "reverse",
+        repeat: Infinity,
+      },
     }),
     hidden: { opacity: 0 },
   };
