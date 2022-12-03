@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 import { AnimatedDiv } from "./components/AnimatedDiv";
 import { AnimatedList } from "./components/AnimatedList";
 import { AnimatedTextP } from "./components/AnimatedTextP";
