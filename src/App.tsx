@@ -9,11 +9,11 @@ import { Label } from "./components/ui/Label";
 
 export const App = () => {
   return (
-    <div>
+    <div className="container">
       <Label text="Caroucel" />
       <Caroucel />
 
-      <div className="flex gap-10 justify-center">
+      <div className="flex gap-10 justify-center phone:flex-col phone:gap-4">
         <div>
           <Label text="Animated Text" />
           <AnimatedTextP />
