@@ -10,9 +10,6 @@ module.exports = {
         myDark: "#043C4A",
       },
     },
-    screens: {
-      phone: { max: "639px" },
-    },
   },
   plugins: [],
 };

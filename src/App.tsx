@@ -4,6 +4,7 @@ import { AnimatedDiv } from "./components/AnimatedDiv";
 import { AnimatedList } from "./components/AnimatedList";
 import { AnimatedTextP } from "./components/AnimatedTextP";
 import { Caroucel } from "./components/Carousel";
+import { Filtering } from "./components/Filtering";
 import { ReorderList } from "./components/ReorderList";
 import { Label } from "./components/ui/Label";
 
@@ -13,7 +14,7 @@ export const App = () => {
       <Label text="Caroucel" />
       <Caroucel />
 
-      <div className="flex gap-10 justify-center phone:flex-col phone:gap-4">
+      <div className="flex gap-10 justify-center">
         <div>
           <Label text="Animated Text" />
           <AnimatedTextP />
@@ -32,6 +33,9 @@ export const App = () => {
 
       <Label text="Reordered List" />
       <ReorderList />
+
+      <Label text="Filtering Animation" />
+      <Filtering />
     </div>
   );
 };
