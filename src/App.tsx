@@ -13,7 +13,7 @@ export const App = () => {
       <Label text="Caroucel" />
       <Caroucel />
 
-      <div className="sm:flex gap-10 justify-center">
+      <div className="flex flex-wrap gap-10 justify-center">
         <div>
           <Label text="Animated Text" />
           <AnimatedTextP />
