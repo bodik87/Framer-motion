@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ICard {
@@ -38,9 +38,15 @@ export const Filtering = () => {
       setActiveFilter(category);
       return;
     }
-    setActiveFilter(category);
-    setFilteredCards(cards);
+    if (category === "All") {
+      setActiveFilter(category);
+      setFilteredCards(cards);
+    } else {
+      return;
+    }
   };
+
+  console.log("render");
 
   return (
     <div>
@@ -77,7 +83,7 @@ export const Filtering = () => {
             className="bg-gradient-to-tr from-myRed/70 via-purple-300 to-blue-400 mb-2 w-full shadow-xl px-4 py-2 mx-auto rounded-lg text-sm text-center border-2 border-white"
           >
             <p className="font-bold text-lg">{card.word}</p>
-            <p className="text-sm font-semibold">{card.translate}</p>
+            <p className="text-sm font-semibold">✔ {card.translate}</p>
             <p>{card.practice}</p>
           </motion.div>
         ))}

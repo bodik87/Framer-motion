@@ -1,3 +1,5 @@
+import { motion, useScroll } from "framer-motion";
+
 import { AnimatedDiv } from "./components/AnimatedDiv";
 import { AnimatedList } from "./components/AnimatedList";
 import { AnimatedTextP } from "./components/AnimatedTextP";
@@ -8,8 +10,13 @@ import { Label } from "./components/ui/Label";
 // import ListIcon from "./components/ui/icons/list.svg";
 
 export const App = () => {
+  const { scrollYProgress } = useScroll();
   return (
     <div>
+      <motion.div
+        className="fixed top-0 left-0 right-0 origin-[0%] h-[3px] bg-myRed"
+        style={{ scaleX: scrollYProgress }}
+      ></motion.div>
       <Label text="Filtering Animation" />
       <Filtering />
 
