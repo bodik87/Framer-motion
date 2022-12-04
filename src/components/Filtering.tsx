@@ -71,7 +71,7 @@ export const Filtering = () => {
         animate={{ opacity: 1, scale: 1 }}
         initial={{ opacity: 0, scale: 0.5 }}
         exit={{ opacity: 0, scale: 0.5 }}
-        className="grid grid-cols-2 sm:grid-cols-3 sm:w-9/12 mx-auto gap-2 sm:gap-4"
+        className="grid grid-cols-2 sm:grid-cols-3 mx-auto gap-2 sm:gap-4"
       >
         {filteredCards.map((card) => (
           <motion.div
