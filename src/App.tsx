@@ -5,7 +5,7 @@ import { Caroucel } from "./components/Carousel";
 import { Filtering } from "./components/Filtering";
 import { ReorderList } from "./components/ReorderList";
 import { Label } from "./components/ui/Label";
-import ListIcon from "./components/ui/icons/list.svg";
+// import ListIcon from "./components/ui/icons/list.svg";
 
 export const App = () => {
   return (
@@ -30,7 +30,7 @@ export const App = () => {
         </div>
       </div>
 
-      {/* <Label text="Drag It!" Icon={ListIcon} /> */}
+      <Label text="Drag It!" />
       <ReorderList />
 
       <Label text="Filtering Animation" />
