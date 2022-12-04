@@ -49,7 +49,7 @@ export const Filtering = () => {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 w-9/12 mx-auto gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 sm:w-9/12 mx-auto gap-2 sm:gap-4">
         {filteredCards.map((card) => (
           <div
             key={card.id}
@@ -57,7 +57,7 @@ export const Filtering = () => {
           >
             <p className="font-bold text-lg">{card.word}</p>
             <p className="text-sm font-semibold">{card.translate}</p>
-            <p>{card.practice}</p>
+            <p className="text-left">{card.practice}</p>
           </div>
         ))}
       </div>

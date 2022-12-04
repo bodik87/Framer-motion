@@ -43,7 +43,7 @@ export const ReorderList = () => {
         {items.length === 4 && (
           <div
             onClick={deleteItem}
-            className={`bg-myRed border-red-700 ${btnStyle}`}
+            className={`bg-myRed border-red-700 ${btnStyle} text-white`}
           >
             -
           </div>
