@@ -8,7 +8,7 @@ interface ICard {
   id: string;
 }
 
-const categoryNames = ["Body", "Colors", "Computers", "School"];
+const categoryNames = ["All", "Body", "Colors", "Computers", "School"];
 
 const btnStyle =
   "border-2 font-bold shadow-xl px-1.5 sm:px-4 py-1 w-fit text-center rounded-lg mb-2 mr-2 text-sm cursor-pointer bg-myRed border-red-700 text-white";
@@ -16,6 +16,7 @@ const btnStyle =
 export const Filtering = () => {
   const [cards, setCards] = useState<ICard[]>([]);
   const [filteredCards, setFilteredCards] = useState<ICard[]>([]);
+  const [activeFilter, setActiveFilter] = useState("All");
 
   const fetching = async () => {
     const response = await fetch(
@@ -31,22 +32,26 @@ export const Filtering = () => {
   }, []);
 
   const filterCategory = (category: string) => {
-    setFilteredCards(cards.filter((card) => card.categoryName === category));
+    if (category !== activeFilter && category !== "All") {
+      setFilteredCards(cards.filter((card) => category === card.categoryName));
+      setActiveFilter(category);
+      return;
+    }
+    setActiveFilter(category);
+    setFilteredCards(cards);
   };
 
   return (
     <div>
       <div className="flex flex-wrap justify-center">
-        <button
-          className={`${btnStyle} bg-myGreen border-emerald-600 text-gray-900`}
-          onClick={() => setFilteredCards(cards)}
-        >
-          All
-        </button>
         {categoryNames.map((categoryName) => (
           <button
             key={categoryName}
-            className={btnStyle}
+            className={
+              categoryName === activeFilter
+                ? `${btnStyle} border-black`
+                : btnStyle
+            }
             onClick={() => filterCategory(categoryName)}
           >
             {categoryName}
