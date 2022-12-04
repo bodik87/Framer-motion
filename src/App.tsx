@@ -12,6 +12,10 @@ export const App = () => {
     <div>
       <Label text="Filtering Animation" />
       <Filtering />
+
+      <Label text="Drag It!" />
+      <ReorderList />
+
       <Label text="Caroucel" />
       <Caroucel />
 
@@ -31,9 +35,6 @@ export const App = () => {
           <AnimatedDiv />
         </div>
       </div>
-
-      <Label text="Drag It!" />
-      <ReorderList />
     </div>
   );
 };
