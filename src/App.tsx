@@ -10,6 +10,8 @@ import { Label } from "./components/ui/Label";
 export const App = () => {
   return (
     <div>
+      <Label text="Filtering Animation" />
+      <Filtering />
       <Label text="Caroucel" />
       <Caroucel />
 
@@ -32,9 +34,6 @@ export const App = () => {
 
       <Label text="Drag It!" />
       <ReorderList />
-
-      <Label text="Filtering Animation" />
-      <Filtering />
     </div>
   );
 };

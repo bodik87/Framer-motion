@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ICard {
   categoryName: string;
@@ -49,7 +50,7 @@ export const Filtering = () => {
             key={categoryName}
             className={
               categoryName === activeFilter
-                ? `${btnStyle} border-black`
+                ? `${btnStyle} border-emerald-600 bg-myGreen`
                 : btnStyle
             }
             onClick={() => filterCategory(categoryName)}
@@ -58,18 +59,29 @@ export const Filtering = () => {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 sm:w-9/12 mx-auto gap-2 sm:gap-4">
+
+      <motion.div
+        layout
+        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+        className="grid grid-cols-2 sm:grid-cols-3 sm:w-9/12 mx-auto gap-2 sm:gap-4"
+      >
         {filteredCards.map((card) => (
-          <div
+          <motion.div
+            layout
+            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.7 }}
+            exit={{ opacity: 0, scale: 0.7 }}
             key={card.id}
             className="bg-gradient-to-tr from-myRed/50 via-purple-300 to-blue-300 mb-2 w-full shadow-xl px-4 py-2 mx-auto rounded-lg text-sm text-center border-2 border-white"
           >
             <p className="font-bold text-lg">{card.word}</p>
             <p className="text-sm font-semibold">{card.translate}</p>
             <p>{card.practice}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
