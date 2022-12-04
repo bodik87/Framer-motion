@@ -71,7 +71,8 @@ export const Filtering = () => {
         animate={{ opacity: 1, scale: 1 }}
         initial={{ opacity: 0, scale: 0.5 }}
         exit={{ opacity: 0, scale: 0.5 }}
-        className="grid grid-cols-2 sm:grid-cols-3 mx-auto gap-2 sm:gap-4"
+        transition={{ duration: 1, type: "spring" }}
+        className="grid grid-cols-2 sm:grid-cols-3 w-3/4 mx-auto gap-2 sm:gap-4"
       >
         {filteredCards.map((card) => (
           <motion.div
@@ -80,11 +81,13 @@ export const Filtering = () => {
             initial={{ opacity: 0, scale: 0.7 }}
             exit={{ opacity: 0, scale: 0.7 }}
             key={card.id}
-            className="bg-gradient-to-tr from-myRed/70 via-purple-300 to-blue-400 mb-2 w-full shadow-xl px-4 py-2 mx-auto rounded-lg text-sm text-center border-2 border-white"
+            className="bg-gradient-to-tr from-myRed/70 via-purple-300 to-blue-400 mb-2 w-full shadow-xl px-4 py-3 mx-auto rounded-lg text-sm border-2 border-white"
           >
             <p className="font-bold text-lg">{card.word}</p>
-            <p className="text-sm font-semibold">✔ {card.translate}</p>
-            <p>{card.practice}</p>
+            <p className="text-sm font-semibold bg-myRed w-fit text-white py-1 px-2 rounded-md mt-1 mb-2">
+              [ {card.translate} ]
+            </p>
+            <p className="font-semibold text-[0.8rem]">{card.practice}</p>
           </motion.div>
         ))}
       </motion.div>

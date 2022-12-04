@@ -15,7 +15,7 @@ export const App = () => {
   return (
     <div>
       <motion.div
-        className="fixed top-0 left-0 right-0 origin-[0%] h-[3px] bg-myRed"
+        className="fixed top-0 left-0 right-0 origin-[0%] h-2 z-10 backdrop-blur-xl bg-myRed/40"
         style={{ scaleX: scrollYProgress }}
       ></motion.div>
       <Label text="Filtering Animation" />
@@ -26,6 +26,9 @@ export const App = () => {
 
       <Label text="Caroucel" />
       <Caroucel />
+
+      <Label text="Expandable Card" />
+      <ExpandableCard />
 
       <div className="flex flex-wrap gap-8 justify-center">
         <div>
@@ -43,9 +46,6 @@ export const App = () => {
           <AnimatedDiv />
         </div>
       </div>
-
-      <Label text="Expandable Card" />
-      <ExpandableCard />
     </div>
   );
 };

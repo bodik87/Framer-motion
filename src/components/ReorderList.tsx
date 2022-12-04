@@ -27,7 +27,7 @@ export const ReorderList = () => {
 
   const deleteItem = () => items.length > 3 && setItems(items.slice(0, 3));
   const btnStyle =
-    "border-2 font-bold shadow-xl px-4 py-1 w-12 text-center mx-auto rounded-lg mb-2 text-sm cursor-pointer";
+    "border-2 font-bold shadow-xl px-4 py-1 w-20 text-center mx-auto rounded-lg mb-2 text-sm cursor-pointer";
 
   return (
     <>
@@ -37,7 +37,7 @@ export const ReorderList = () => {
             onClick={addItem}
             className={`bg-myYellow border-slate-500/70 ${btnStyle}`}
           >
-            +
+            + add
           </div>
         )}
         {items.length === 4 && (
@@ -45,7 +45,7 @@ export const ReorderList = () => {
             onClick={deleteItem}
             className={`bg-myRed border-red-700 ${btnStyle} text-white`}
           >
-            -
+            🗑 del
           </div>
         )}
       </div>
@@ -61,7 +61,7 @@ export const ReorderList = () => {
               {...variants}
             >
               <div
-                className={`bg-myGreen mb-2 shadow-xl px-4 py-2 w-fit mx-auto rounded-lg text-sm text-center`}
+                className={`bg-myGreen mb-2 shadow-xl px-8 py-3 w-fit mx-auto rounded-lg text-sm text-center`}
               >
                 {item.title}
               </div>

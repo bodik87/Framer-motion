@@ -10,17 +10,23 @@ export const ExpandableCard = () => {
       layout
       style={{ borderRadius: "1rem" }}
       onClick={() => setIsOpen(!isOpen)}
-      className="bg-myYellow text-gray-900 px-5 py-3 w-fit max-w-[500px] mx-auto shadow-lg"
+      className="bg-myYellow text-gray-900 px-5 py-4 w-fit max-w-[500px] mx-auto shadow-lg"
     >
       <motion.h1 layout="position" className="font-bold">
-        Title ✌
+        {isOpen ? "Hide 👇" : "Click 👈"}
       </motion.h1>
       {isOpen && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <p className="pt-1">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-            recusandae tempora ea culpa atque consequuntur natusS.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
+          <a
+            href="https://bodik87.github.io/index.html"
+            target="blank"
+            className="font-bold text-xs text-green-800"
+          >
+            HTML + CSS Portfolio 🎨
+          </a>
         </motion.div>
       )}
     </motion.div>
