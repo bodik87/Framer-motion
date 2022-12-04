@@ -10,7 +10,7 @@ export const ExpandableCard = () => {
       layout
       style={{ borderRadius: "1rem" }}
       onClick={() => setIsOpen(!isOpen)}
-      className="bg-myYellow text-gray-900 px-5 py-3 w-1/2 mx-auto shadow-lg"
+      className="bg-myYellow text-gray-900 px-5 py-3 w-fit max-w-[500px] mx-auto shadow-lg"
     >
       <motion.h1 layout="position" className="font-bold">
         Title ✌
