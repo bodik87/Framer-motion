@@ -22,7 +22,7 @@ export const Label = ({ text, Icon }: LabelProps) => {
       <motion.div
         custom={2}
         variants={LabelAnimation}
-        className="bg-myRed rounded-lg px-4 py-2 font-bold mt-8 mb-4 bold mx-auto w-max text-white shadow-xl border-4 border-white/70 select-none"
+        className="bg-myRed rounded-full px-8 py-3 font-bold mt-8 mb-4 bold mx-auto w-max text-white shadow-xl border-4 border-white/70"
       >
         {Icon}
         {text}
